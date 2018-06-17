@@ -156,6 +156,11 @@ Prefab:
       propertyPath: debugSettings.displayCommand
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114000012508119198, guid: 28cd8aa82dcd55a42b58df85d0c3f790,
+        type: 2}
+      propertyPath: debugSettings.timerTick
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 28cd8aa82dcd55a42b58df85d0c3f790, type: 2}
   m_IsPrefabParent: 0
@@ -370,7 +375,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PagesNeeded: 0
   PagesRead: 0
-  ButtonPressesPerSecond: 6
+  ButtonPressesPerSecond: 3
   ReactionTime: 0.5
   PagesTextMesh: {fileID: 479198999}
 --- !u!1001 &1692840176

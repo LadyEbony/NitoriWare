@@ -19,7 +19,7 @@ namespace NitorInc.KosuzuRead {
         void Start() {
             Debug.Log(MicrogameTimer.instance.beatsLeft + " | " + StageController.beatLength + " | " + Time.timeScale);
 
-            // Get Time remaining for game (scaled as well)
+            // Get Time remaining for game (scaled by faster speed as well)
             // Subtract standard reaction time
             // And multiply by the required button presses
             PagesNeeded = Mathf.FloorToInt((MicrogameTimer.instance.beatsLeft * StageController.beatLength / Time.timeScale - ReactionTime) 
@@ -34,6 +34,11 @@ namespace NitorInc.KosuzuRead {
             {
                 PagesRead++;
                 UpdateTextMeshDebug();
+
+                if (PagesRead == PagesNeeded)
+                {
+                    MicrogameController.instance.setVictory(true);
+                }
             }   
         }
 
